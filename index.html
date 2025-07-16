@@ -16,7 +16,7 @@
 
     h1 {
       margin-top: 40px;
-      font-weight: 500; /* Medium weight */
+      font-weight: 500;
       font-size: 2rem;
     }
 
@@ -30,6 +30,31 @@
       width: 100%;
       height: auto;
       border-radius: 4px;
+    }
+
+    .contact {
+      margin: 60px auto;
+      max-width: 600px;
+      padding: 0 20px;
+    }
+
+    .contact h2 {
+      font-weight: 500;
+      margin-bottom: 20px;
+    }
+
+    .contact button {
+      padding: 12px 24px;
+      font-size: 1rem;
+      background-color: #333;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .contact button:hover {
+      background-color: #555;
     }
 
     footer {
@@ -48,9 +73,26 @@
     <img src="screenshot.jpg" alt="March Housing Aerial View" />
   </div>
 
+  <div class="contact">
+    <h2>Contact Us</h2>
+    <div id="email-button"></div>
+  </div>
+
   <footer>
     <p>Copyright © 2025 March Housing - All Rights Reserved.</p>
   </footer>
+
+  <script>
+    // Obfuscated email logic
+    const user = "chris"; // 👈 Replace with the name portion
+    const domain = "marchhousing.com"; // 👈 Replace with your domain
+    const email = `${user}@${domain}`;
+    const link = `mailto:${email}`;
+
+    // Inject the button into the placeholder div
+    document.getElementById('email-button').innerHTML =
+      `<a href="${link}"><button>Contact</button></a>`;
+  </script>
 
 </body>
 </html>
