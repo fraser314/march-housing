@@ -32,6 +32,15 @@
       border-radius: 4px;
     }
 
+    .description {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 0 20px;
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #333;
+    }
+
     .contact {
       margin: 60px auto;
       max-width: 600px;
@@ -73,6 +82,11 @@
     <img src="screenshot.jpg" alt="March Housing Aerial View" />
   </div>
 
+  <div class="description">
+    <p>
+      March Housing provides independent contractor and consulting services to residential real estate developers and property owners, including acquisitions, development, project management, and on-going property/ asset management.    </p>
+  </div>
+
   <div class="contact">
     <h2>Contact Us</h2>
     <div id="email-button"></div>
@@ -84,12 +98,12 @@
 
   <script>
     // Obfuscated email logic
-    const user = "chris"; // 👈 Replace with the name portion
-    const domain = "marchhousing.com"; // 👈 Replace with your domain
+    const user = "yourname"; 
+    const domain = "marchhousing.com"; 
     const email = `${user}@${domain}`;
     const link = `mailto:${email}`;
 
-    // Inject the button into the placeholder div
+    // Inject the contact button
     document.getElementById('email-button').innerHTML =
       `<a href="${link}"><button>Contact</button></a>`;
   </script>
